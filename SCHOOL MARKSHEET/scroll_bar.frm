@@ -58,6 +58,7 @@ Private Sub HScroll1_Change()
 Text1 = HScroll1.Value
 End Sub
 
+
 Private Sub VScroll1_Change()
 Text1 = VScroll1.Value
 End Sub
