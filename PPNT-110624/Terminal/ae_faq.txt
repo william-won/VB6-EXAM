@@ -1,0 +1,234 @@
+1.  Every character I type is displayed twice.
+
+    In the NetTerm desktop dialog panel, turn off local echo.
+
+2.  SecureNetTerm seems to look a little different on some of
+    my workstations.
+
+    SecureNetTerm takes advantage of video displays that can display
+    more then 256 colors.  If your video card will support Hi-Color
+    or True-Color (Control Panel-Display), some of the bitmaps within
+    SecureNetTerm will look much better.
+
+    SecureNetTerm also takes advantage of the advanced features found
+    in Micosoft's comctl32.dll, such as the menu and toolbars.  Upon
+    program startup, SecureNetTerm takes a look at the version of the
+    comctl32.dll and adjusts the GUI depending upon the version.
+    However, like a lot of things Microsoft does, the only way you can
+    get the latest look and feel is to have the latest Microsoft Internet
+    Explorer installed.  That does not mean you have to use it, just
+    installed.  The more current the version of the Explorer you have,
+    the more features SecureNetTerm can and will use.
+
+3.  Several items on the menu/toolbar can be customized by editing the
+    netterm2.ini file located in the Windows directory.  If you desire
+    to have gray/color images displayed on the toolbar, locate the keyword
+    GrayInactive=0 and set it to GrayInactive=1.  If you do not want the
+    animation on the toolbar/menubar to rotate, locate the keyword
+    Animate=10,3 and remove the comment (#) from the beginning of the line.
+    The meaning of 10,3 is explained above it.  You can also stop/start
+    the rotation by a right mouse click on the toolbar.
+
+4.  I am having trouble pasting text into the NetTerm window.
+    I am having trouble doing an ascii file transfer.
+
+    NetTerm uses two timing values for both paste text and send
+    ascii files to a host.  These can be specified by selecting
+    the Options|Setup|Global Settings|File Transfer Tab.
+    Normally Delay-1 should be 20 and Delay-2 should be 200.
+
+5.  I cannot find my modem in your list of supported modems.
+
+    Trying to keep up with all of the available modems and buying each one
+    for testing would be very expensive.  We would also suggest that you
+    select the TAPI option if your systems supports it.  A source for most
+    modem setup strings can be found at:
+
+         http://www.spy.net/~dustin/modem/
+
+6.  For the Unix WordPerfect users, from one of our clients:
+
+    A hint:  If any other Netterm users inquire about using
+    your telnet with WP5.2+ for Unix, ensure they use
+    386CONS as the value for the environment variable
+    WPTERM52 when using KEYS-WORDPERFECT.  Even though they
+    are actually using vt100 emulation, this will ensure the
+    system anticipates the correct codes.
+
+7.  I can't get the modem to be silent while dialing, why not?
+
+    NetTerm recently changed the way it sets the modem up in order
+    to handle some of the newer PCMCIA modems on the market.  If
+    your current modem setup sting looks something like:
+
+         AT %F1 M0 S11=40 S2=128
+
+    change it to:
+
+         AT%F1\rATM0\rATS11=40 S2=128
+
+    The ATM0 portion of the command is what tells the modem to be
+    silent.
+
+8.  Can I use the Transparent print feature on hosts that do not support
+    this feature?
+
+    Yes, we have added a new menu item under the "File" menu called
+    "Formatted Transparent Printing On".  This feature allows limited
+    control and formatting of data that is normally sent only to the
+    screen to be also sent to the printer using the same options that
+    are available to normal transparent print requests.  The following
+    two keywords in the netterm.ini control the formatting:
+
+         FORMATPRINT_START=y^M
+         FORMATPRINT_LINES=39
+
+    The FORMATPRINT_START keyword specifies what string should be sent
+    to the host to start the printout.  When the formatted transparent
+    print option is selected, the internal transparent print logic is
+    turned on and the FORMATPRINT_START string is sent to the host to
+    indicate that the printing should be started.  The FORMATPRINT_LINES
+    keyword specifies the number of lines (line feeds) that should be
+    processed as one page.  When this value is reached, a form feed
+    will be added to the printer data to force a new page.  Once the
+    host has completed sending all the data, the 'Transparent Printing
+    Off' menu item should be selected.  This will instruct NetTerm to
+    print the data using the options selected in the Options-Setup-
+    Global Settings-Printing dialog panel.
+
+    Note that since both menu items that control this feature are menu
+    items, QuickButtons can be defined to start and stop the transparent
+    printing.
+
+
+// NetTerm Menu Items
+// File Menu
+#define IDM_CONNECT                   10000
+#define IDM_DISCONNECT                10001
+#define IDM_PHONE                     10002
+#define IDM_BBSLIST                   10003
+#define IDM_SEPARTOR_10004            10004
+#define IDM_PRINT                     10005
+#define IDM_SETUP                     10006
+#define IDM_SPRINT                    10007
+#define IDM_SEPARTOR_10008            10008
+#define IDM_LOGPRINT                  10009
+#define IDM_LOGFILE                   10010
+#define IDM_EJECTP                    10011
+#define IDM_SEPARTOR_10012            10012
+#define IDM_TPON                      10013
+#define IDM_TPOFF                     10014
+#define IDM_STPON                     10015
+#define IDM_SEPARTOR_10015            10016
+#define IDM_EXIT                      10017
+
+// Edit Menu
+#define IDM_SCB                       11001
+#define IDM_RCB                       11002
+#define IDM_SEPARTOR_11003            11003
+#define IDM_RESET                     11004
+#define IDM_ERESET                    11005
+#define IDM_SBREAK                    11006
+#define IDM_LBREAK                    11007
+#define IDM_AP                        11008
+#define IDM_SEPARTOR_11009            11009
+#define IDM_SAVESCREEN                11010
+#define IDM_CLEAR                     11011
+#define IDM_CLEARS                    11012
+#define IDM_SAVEAS                    11013
+#define IDM_SEPARTOR_11014            11014
+#define IDM_PASTEIPA                  11015
+#define IDM_PASTEIP                   11016
+#define IDM_MARK                      11017  (Hidden on the menu)
+
+// Options Menu
+// Setup Main
+#define IDM_FONT                      12000
+#define IDM_SETTINGS                  12001
+#define IDM_ANSIC                     12002
+#define IDM_KB1                       12003
+#define IDM_DESKTOP                   12004
+#define IDM_DBBAR                     12005
+#define IDM_PIN                       12006
+#define IDM_SETTELNET                 12007
+#define IDM_SEPARTOR_12008            12008
+// International Video/Keyboard
+#define IDM_SS                        12300
+#define IDM_AM                        12301
+#define IDM_VM                        12302
+#define IDM_KM                        12303
+#define IDM_KO                        12304
+#define IDM_LCD                       12305
+
+// Options Tools
+#define IDM_FINGER                    12400
+#define IDM_RESOLVE                   12401
+#define IDM_MYIP                      12402
+#define IDM_FTPD                      12403
+#define IDM_PRINTER                   12404
+#define IDM_FTPC                      12405
+// Options Trace
+#define IDM_TRACE1                    12501
+#define IDM_TRACE2                    12502
+
+// Send Menu
+#define IDM_SASCII                    906
+#define IDM_SKERMIT                   905
+#define IDM_SZMODEM                   900
+
+// Receive Menu
+#define IDM_RASCII                    916
+#define IDM_RKERMIT                   915
+#define IDM_RZMODEM                   917
+
+// Window Menu
+#define IDM_NEWWINDOW                 15000
+#define IDM_QUICK                     15001
+#define IDM_EDITOR                    15002
+#define IDM_TITLE                     15003
+#define IDM_SAVEXY                    15004
+#define IDM_SEPARTOR_15004            15005
+#define IDM_HOSTSTART                 15500
+#define IDM_HOSTEND                   15549
+
+// Help Menu
+#define IDM_HELP                      16000
+#define IDM_SEPARTOR_16001            16001
+#define IDM_ORDERING                  16002
+#define IDM_REGISTER                  16003
+#define IDM_LEGAL                     16004
+#define IDM_SEPARTOR_16005            16005
+#define IDM_ABOUT                     16006
+
+// Mouse Menu
+#define IDM_URL                       17000
+#define IDM_PSTRING1                  17001
+#define IDM_PSTRING2                  17002
+#define IDM_BBSDOOR                   17003
+#define IDM_SKEY                      17004
+#define IDM_SEPARTOR_17005            17005
+#define IDM_MSCB                      17006
+#define IDM_MRCB                      17007
+#define IDM_MRSCB                     17008
+#define IDM_MCLEAR                    17009
+#define IDM_MPRINT                    17010
+#define IDM_MRESET                    17016
+#define IDM_ESCROLL                   17011
+#define IDM_MCLEARS                   17017
+#define IDM_PSCROLL                   17012
+#define IDM_MSAVEAS                   17018
+#define IDM_PRINTH                    17013
+#define IDM_SHOWCLIP                  17014
+#define IDM_SEPARTOR_17019            17019
+#define IDM_MPASTEIPA                 17020
+#define IDM_MPASTEIP                  17021
+#define IDM_SEPARTOR_17022            17022
+#define IDM_MSFONT                    17023
+#define IDM_MMFONT                    17024
+#define IDM_MLFONT                    17025
+#define IDM_SEPARTOR_17026            17026
+#define IDM_MSSFONT                   17027
+#define IDM_MSMFONT                   17028
+#define IDM_MSLFONT                   17029
+#define IDM_NOOP                      17031
+

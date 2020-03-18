@@ -1,0 +1,433 @@
+[Root]
+Most Recent Package=DLMS RW for Dr.Oh(20060302)
+
+
+[Package|DLMS RW for NURI(20051117)|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+
+[Package|DLMS RW for NURI(20051117)|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DLMS RW for NURI(20051117)|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DLMS RW for NURI(20051117)|Files Found]
+
+[Package|DLMS RW for NURI(20051117)|Files Released]
+
+[Package|DLMS RW for NURI(20051117)|Missing Dependency Information]
+
+[Package|DLMS RW for NURI(20051117)|Out-of-Date Dependency Information]
+
+[Package|DLMS RW for NURI(20051117)|Files Added]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=
+
+[Package|DLMS RW for NURI(20051117)|Files Removed]
+
+[Package|DLMS RW for NURI(20051117)|Files In Project]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\system32\VB6KO.DLL=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=Yes
+D:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=Yes
+D:\WINDOWS\system32\RCHTXKO.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=Yes
+
+[Package|DLMS RW for NURI(20051117)|Configure Registry Files]
+Applicable=No
+
+[Package|DLMS RW for NURI(20051117)|Configure Remote Servers]
+Applicable=No
+
+[Package|DLMS RW for NURI(20051117)|Install Locations]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\VB6KO.DLL=$(WinSysPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=$(AppPath)
+D:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\RCHTXKO.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=$(AppPath)
+
+[Package|DLMS RW for NURI(20051117)|Configure Shared Files]
+Applicable=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=No
+
+[Package|DLMS RW for NURI(20051117)|Distribution]
+Type=single
+Size=
+Title=LSIS DLMS RW v0.3.0 for NURI
+
+[Package|DLMS RW for NURI(20051117)|IconGroups]
+Group0=DLMS RW (LSIS)
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|DLMS RW for NURI(20051117)|DLMS RW (LSIS)]
+Icon1=DLMS_RW.exe
+Title1=DLMS RW v0.3.0 for NURI
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|DLMS RW for NURI(20051117)|Package]
+PackageFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+ProjectFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW
+ServerSideCab=
+File1=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\setup.exe
+File2=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\Setup.Lst
+File3=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\DLMS_RW.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|DLMS RW for 인도출장(20051223)|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+
+[Package|DLMS RW for 인도출장(20051223)|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DLMS RW for 인도출장(20051223)|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DLMS RW for 인도출장(20051223)|Files Found]
+
+[Package|DLMS RW for 인도출장(20051223)|Files Released]
+
+[Package|DLMS RW for 인도출장(20051223)|Missing Dependency Information]
+
+[Package|DLMS RW for 인도출장(20051223)|Out-of-Date Dependency Information]
+
+[Package|DLMS RW for 인도출장(20051223)|Files Added]
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\commset.dat=
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\obis_table.dat=
+
+[Package|DLMS RW for 인도출장(20051223)|Files Removed]
+
+[Package|DLMS RW for 인도출장(20051223)|Files In Project]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\system32\VB6KO.DLL=Yes
+D:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=Yes
+D:\WINDOWS\system32\RCHTXKO.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=Yes
+
+[Package|DLMS RW for 인도출장(20051223)|Configure Registry Files]
+Applicable=No
+
+[Package|DLMS RW for 인도출장(20051223)|Configure Remote Servers]
+Applicable=No
+
+[Package|DLMS RW for 인도출장(20051223)|Install Locations]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\VB6KO.DLL=$(WinSysPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=$(AppPath)
+D:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\RCHTXKO.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=$(AppPath)
+
+[Package|DLMS RW for 인도출장(20051223)|Configure Shared Files]
+Applicable=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=No
+
+[Package|DLMS RW for 인도출장(20051223)|Distribution]
+Type=single
+Size=
+Title=LSIS DLMS RW v0.3.3
+
+[Package|DLMS RW for 인도출장(20051223)|Package]
+PackageFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+ProjectFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW
+ServerSideCab=
+File1=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\setup.exe
+File2=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\Setup.Lst
+File3=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\DLMS_RW.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|DLMS RW for 인도출장(20051223)|IconGroups]
+Group0=LSIS DLMS RW
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|DLMS RW for 인도출장(20051223)|LSIS DLMS RW]
+Icon1=DLMS_RW.exe
+Title1=DLMS RW v0.3.3
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|DLMS RW for NURI(20060215)|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+
+[Package|DLMS RW for NURI(20060215)|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DLMS RW for NURI(20060215)|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DLMS RW for NURI(20060215)|Files Found]
+
+[Package|DLMS RW for NURI(20060215)|Files Released]
+
+[Package|DLMS RW for NURI(20060215)|Missing Dependency Information]
+
+[Package|DLMS RW for NURI(20060215)|Out-of-Date Dependency Information]
+
+[Package|DLMS RW for NURI(20060215)|Files Added]
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\commset.dat=
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\obis_table.dat=
+
+[Package|DLMS RW for NURI(20060215)|Files Removed]
+
+[Package|DLMS RW for NURI(20060215)|Files In Project]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\system32\VB6KO.DLL=Yes
+D:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=Yes
+D:\WINDOWS\system32\RCHTXKO.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=Yes
+
+[Package|DLMS RW for NURI(20060215)|Configure Registry Files]
+Applicable=No
+
+[Package|DLMS RW for NURI(20060215)|Configure Remote Servers]
+Applicable=No
+
+[Package|DLMS RW for NURI(20060215)|Install Locations]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\VB6KO.DLL=$(WinSysPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=$(AppPath)
+D:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\RCHTXKO.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=$(AppPath)
+
+[Package|DLMS RW for NURI(20060215)|Configure Shared Files]
+Applicable=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=No
+
+[Package|DLMS RW for NURI(20060215)|Distribution]
+Type=single
+Size=
+Title=LSIS DLMS RW v0.4.0 (for NURI)
+
+[Package|DLMS RW for NURI(20060215)|Package]
+PackageFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+ProjectFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW
+ServerSideCab=
+File1=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\setup.exe
+File2=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\Setup.Lst
+File3=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\DLMS_RW.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|DLMS RW for NURI(20060215)|IconGroups]
+Group0=LSIS DLMS RW
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|DLMS RW for NURI(20060215)|LSIS DLMS RW]
+Icon1=DLMS_RW.exe
+Title1=DLMS RW v0.4.0
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|DLMS RW for Dr.Oh(20060302)|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+
+[Package|DLMS RW for Dr.Oh(20060302)|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DLMS RW for Dr.Oh(20060302)|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DLMS RW for Dr.Oh(20060302)|Files Found]
+
+[Package|DLMS RW for Dr.Oh(20060302)|Files Released]
+
+[Package|DLMS RW for Dr.Oh(20060302)|Missing Dependency Information]
+
+[Package|DLMS RW for Dr.Oh(20060302)|Out-of-Date Dependency Information]
+
+[Package|DLMS RW for Dr.Oh(20060302)|Files Added]
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\commset.dat=
+d:\소스 backup(hong)\저압amr(인도출장)\hong_dlms_rw\obis_table.dat=
+
+[Package|DLMS RW for Dr.Oh(20060302)|Files Removed]
+
+[Package|DLMS RW for Dr.Oh(20060302)|Files In Project]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=Yes
+D:\WINDOWS\system32\msvbvm60.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\WINDOWS\system32\VB6KO.DLL=Yes
+D:\WINDOWS\system32\RICHTX32.OCX=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=Yes
+D:\WINDOWS\system32\RCHTXKO.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+D:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=Yes
+
+[Package|DLMS RW for Dr.Oh(20060302)|Configure Registry Files]
+Applicable=No
+
+[Package|DLMS RW for Dr.Oh(20060302)|Configure Remote Servers]
+Applicable=No
+
+[Package|DLMS RW for Dr.Oh(20060302)|Install Locations]
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\VB6KO.DLL=$(WinSysPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=$(AppPath)
+D:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\RCHTXKO.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=$(AppPath)
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=$(AppPath)
+
+[Package|DLMS RW for Dr.Oh(20060302)|Configure Shared Files]
+Applicable=Yes
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMS_RW.exe=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\LSISDLMS.dll=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\CommSet.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\OBIS_Table.dat=No
+D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\DLMSClientDLL1.dll=No
+
+[Package|DLMS RW for Dr.Oh(20060302)|Distribution]
+Type=single
+Size=
+Title=LSIS DLMS RW v0.4.1 (for Dr.Oh)
+
+[Package|DLMS RW for Dr.Oh(20060302)|Package]
+PackageFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup
+ProjectFolder=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW
+ServerSideCab=
+File1=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\setup.exe
+File2=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\Setup.Lst
+File3=D:\소스 Backup(Hong)\저압AMR(인도출장)\Hong_DLMS_RW\Setup\DLMS_RW.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|DLMS RW for Dr.Oh(20060302)|IconGroups]
+Group0=LSIS DLMS RW
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|DLMS RW for Dr.Oh(20060302)|LSIS DLMS RW]
+Icon1=DLMS_RW.exe
+Title1=DLMS RW v0.4.1
+StartIn1=$(AppPath)
+Key1=Icon1

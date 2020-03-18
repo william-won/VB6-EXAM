@@ -1,0 +1,50 @@
+# Script to Login to Internet Provider (Dialup Slip Account)
+count 5
+loop:
+    if !count
+        hangup
+        display "^M^JAborting Script, Maximum count exceeded^M^J"
+        abort
+    endif
+    expect 10 "login:"
+    if !expect
+        hangup
+        redial
+        goto loop
+    endif
+output "zkrr01^M"
+expect 15 "Password:"
+output "xxxxxxx^M"
+expect 15 "(unknown)"
+output "^M"
+expect 15 "$"
+sleep 1
+output "dslip^M"
+expect 10 "Your ip address is "
+if !expect
+    display Aborting... Could not get IP Address
+    abort
+endif
+address
+
+save "ip=^I"                       "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-port=^A"                "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-baudrate=^S"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "netmask=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "gateway=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dns=198.64.6.1 198.64.6.7 128.241.0.84"   "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "domain=neosoft.com"          "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-enabled=1"              "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-handshake=1"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-compressed=1"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "ppp-enabled=0"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mtu=1500"                    "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "rwin=4096"                   "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mss=1460"                    "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dial-option=0"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+
+display "^J^MStarting tcpman.exe^J^M"
+show 2
+exec \winapp\internet\trumpet\tcpman.exe
+online
+

@@ -1,0 +1,53 @@
+# Script to Login to Netcom  (PPP)
+output "^M"
+count 5
+loop:
+    if !count
+        hangup
+        display "^M^JAborting Script, Maximum count exceeded^M^J"
+        abort
+    endif
+    expect 10 "ogin:"
+    if !expect
+        hangup
+        redial
+        goto loop
+    endif
+output "#"
+# Put your netcom usedid here
+output "userid^M"
+expect 15 "assword:"
+# Put your netcom password here
+output "password^M"
+
+expect 10 "PPP session from ("
+if !expect
+    display Aborting... Could not get IP Address
+    abort
+endif
+
+expect 10 " to "
+if !expect
+    display Aborting... Could not get IP Address
+    abort
+endif
+address
+
+save "ip=^I"                       "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-port=^A"                "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-baudrate=^S"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "netmask=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "gateway=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dns=192.100.81.101 192.100.81.105" "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "domain=netcom.com"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-enabled=1"              "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-handshake=1"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-compressed=1"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "ppp-enabled=1"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mtu=1500"                    "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+
+display "^J^MStarting tcpman.exe^J^M"
+show 2
+exec \winapp\internet\trumpet\tcpman.exe
+online
+

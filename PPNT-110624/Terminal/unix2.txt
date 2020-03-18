@@ -1,0 +1,8 @@
+# Script to request both USERID and PASSWORD interactiverly
+expect 10 "login:"
+username "Enter userid"
+output "^U^M"
+expect 10 "Password:"
+password "Enter password"
+output "^P^M"
+

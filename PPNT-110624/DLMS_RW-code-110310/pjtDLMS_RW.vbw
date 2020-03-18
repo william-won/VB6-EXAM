@@ -1,0 +1,9 @@
+modDLMS_DLL = 44, 58, 667, 458, C
+modBinary = 66, 87, 676, 487, C
+modOBIS_Table = 31, 147, 654, 546, C
+modGlobal = 44, 58, 667, 457, C
+frmDataSet = 88, 116, 829, 671, C, 66, 87, 807, 642, C
+frmPassword = 127, 168, 750, 564, C, 110, 145, 733, 541, C
+frmSelective = 88, 116, 716, 489, C, 66, 87, 694, 460, C
+frmMemorySet = 66, 87, 762, 615, C, 22, 29, 718, 557, C
+frmMain = 40, 118, 901, 766, , 4, 33, 1165, 885, C

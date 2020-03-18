@@ -1,0 +1,5 @@
+expect 60 "login:"
+output "<user_name>^M"
+expect 60 "Password:"
+output "<user_password>^M"
+

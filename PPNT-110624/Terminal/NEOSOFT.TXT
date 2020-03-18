@@ -1,0 +1,26 @@
+# Script to Login to Internet Provider (Dialup Shell Account)
+count 5
+loop:
+    if !count
+        hangup
+        display "^M^JAborting Script, Maximum count exceeded^M^J"
+        abort
+    endif
+    expect 10 "login:"
+    if !expect
+        hangup
+        redial
+        goto loop
+    endif
+# This Service Provider expects a system name for the first login,
+# the the login and password values for that system.
+output "starbase^M"
+expect 10 "login:"
+output "zkrr01^M"
+sleep 1
+password
+expect 15 "Password:"
+output "^P^M"
+sleep 2
+output "^M"
+

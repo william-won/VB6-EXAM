@@ -1,0 +1,54 @@
+[ ReadOption Ref. Table ]
+
+000 : Not saving data
+
+001~100 : Just save as this numbers of byte
+
+101~200 : Must save in a rule below
+	101 : DateTime(12byte) 	-> 8Byte(YYYY.MM.DD.hh.nn.ss.dw)
+	102 : Ke2(4byte Float) 	-> Page2 Index39, //Page20 Index5
+	                       	-> Ke1 = 1/Ke2 -> Page2 Index35, //Page20 Index1
+	103 : TF(2byte UInt)	-> Page2 Index45, 4byte Float Type
+				-> Page9 Index41, 2byte Unsigned Int
+	      CT(2byte UInt)	-> Page2 Index49, 4byte Float Type
+	      VT(2byte UInt)	-> Page2 Index53, 4byte Float Type
+	104 : SR Info(10byte)	-> Page5 Index1(Cur),11(M-1), 21(M-2),31(M-3) : Date starts from 3,13,23,33
+	105 : LP_Index(ULong4byte) -> Page11 Index3(2byte) (Need Check !!) Use KEPCO value??
+	106 : DR_Reg(Oct4byte+Oct5byte) -> Page191,261 Index2(1byte)
+	107 : DR-IrReg(Array)	-> Page191,261 Index3~26(24byte)
+	108 : SRDR Condition	-> Page191,261 Index27,28 for Regular bit0 flag set
+				-> Find Script Selector 0001=SRDR, 0002=SR, 0004=DR
+	109 : SRDR Condition	-> Page191,261 Index27,28 for Irregular bit1 flag set
+				-> Find Script Selector 0001=SRDR, 0002=SR, 0004=DR
+
+	110 : LP_Interval(1byte)-> Page191,261 Index36,47(1byte) same data
+	111 : Dmd_NoPeriod(2byte) -> Page191 Index53(2byte) same data
+				-> Refer to LP_Int and calc. DMD_Int and write to Page191 Index36(1byte)
+	112 : Battery Used Sec.(ULong4byte) -> Page11 Index21(4byte) same data
+				-> Page11 Index25(UInt2byte) 200day*24hour - BAT used(Sec)
+	113 : Current Rate(1Byte) -> Page11 Index16 0x01='A', 0x02='B', 0x03='C', 0x04='D' save as ASCII
+	114 : SR_Info(10Byte;Null/Condition/Y/Y/M/D/H/N/S/W)
+				-> Page5&12 Ref Index(12 or 22) and write only condition 1byte
+	115 : Meter Type(1byte)	-> MSB4bit(0:1P2W,1:1P3W,2:3P3W,3:3P4W), LSB4bit(1:Type1,2:Type2,...,9:Type9)
+				-> Page9 Index17, Page2 Index43 2byte(Ex:'12','34')
+
+	121 : Energy/Power Factor of the current month (Attr.2)
+				-> Page40~41 (when VZ_Avail=0;Cur Only) From Index1
+				-> If VZ_Avail=3, Cur>>Page70~71, M-1>>Page60~61, ...
+	123 : Max. Demand of the current month (Attr.2)
+				-> Page43~44 (when VZ_Avail=0;Cur Only) From Index1
+				-> If VZ_Avail=3, Cur>>Page73~74, M-1>>Page63~64, ...
+
+	131 : TOU-Season	-> Page205,275
+	132 : TOU-Week		-> Page206,276
+	133 : TOU-Day		-> Page207~222,277~292
+	134 : TOU-Holiday	-> Page223,224~253 & Non-recur Holiday Start Year Page190,260 Index37(UInt2byte) (Need Check !!)
+
+	141 : Log_Date		-> Page100~101,102~103,116~117,118~119,124~125,126~127,128~129,130~131 (Date&Count)
+
+	151 : Normal Display	-> Page193~198, Resv:Page263~268
+	152 : Alternate Display	-> Page199~204, Resv:Page269~274
+	153 : Display Parameter	-> LCD Display Parameters 22bytes(complex page and index)
+	154 : Billing Parameter	-> Billing Parameters 8bytes(complex page and index)
+
+// Page4 = Page13(RAM), Page5 = Page12(RAM)

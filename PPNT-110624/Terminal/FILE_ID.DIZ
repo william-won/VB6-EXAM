@@ -1,0 +1,10 @@
+NetTerm v4.2.e Internet Telnet OVID Zmodem SLIP
+NetTerm is a Windows based terminal emulator
+with fast zmodem file transfers.  It can also
+be used as a dialer program for SLIP/PPP and
+includes a built in scripting language.
+For Internet hosts, the telnet protocol is
+enabled with VT100 and full ANSI graphics.  A
+ftp server is included.  Transparent printing
+and local host editing is supported for UNIX.
+nt3242e.exe - 32 bit InterSoft@compuserve.com

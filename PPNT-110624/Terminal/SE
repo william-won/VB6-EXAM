@@ -1,0 +1,9 @@
+#! /bin/sh
+if test -r $1
+then
+     sz $1
+     sleep 2
+     echo '[6i'
+else
+echo Filename must exist and be readable
+fi

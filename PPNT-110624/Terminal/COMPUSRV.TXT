@@ -1,0 +1,39 @@
+count 5
+loop:
+    if !count
+        hangup
+        display "^M^JAborting Script, Maximum count exceeded^M^J"
+        abort
+    endif
+    expect 10 "CONNECT"
+    if !expect
+        hangup
+        redial
+        goto loop
+    endif
+sleep 2
+# Transmit a Control-C (^C) to CompuServe, and then wait for the
+# prompt "User ID:".  If this is not seen in 10 seconds, we try again.
+output "^C"
+cis:
+    expect 10 "User ID:"
+    if !expect
+        goto cis
+    endif
+
+# Transmit the user id string (remember the ^M at the end for ENTER)...
+
+    output "xxxxx,xxxx^M"
+
+# Wait for CompuServe to ask for a password...
+
+    expect 10 "Password:"
+
+# Transmit our password
+# (You don't think for a moment that this is my REAL password, do you?????)
+
+    output "xxxxxx.xxxxx^M"
+
+# Wait for CompuServe header,
+    expect 10 "Compuserve"
+

@@ -1,0 +1,41 @@
+# Script to Login to Internet Provider (CompuServe)
+count 5
+loop:
+    if !count
+        hangup
+        display "^M^JAborting Script, Maximum count exceeded^M^J"
+        abort
+    endif
+    expect 10 "CONNECT"
+    if !expect
+        hangup
+        redial
+        goto loop
+    endif
+output "^M"
+expect 15 "Host Name:"
+output "CIS^M"
+expect 15 "USER ID:"
+output "72060,2331/GO:PPPCONNECT^M"
+expect 15 "Password:"
+output "xxxxxx.xxxxx^M"
+expect 15 "PPP Connection"
+
+save "slip-port=^A"                "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-baudrate=^S"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "netmask=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "gateway=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dns=198.4.7.1 198.4.9.1"     "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "domain=compuserve.com"       "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-enabled=1"              "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-handshake=1"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-compressed=0"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "ppp-enabled=1"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mtu=1500"                    "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dial-option=0"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+
+display "^J^MStarting tcpman.exe^J^M"
+show 2
+exec \winapp\internet\trumpet\tcpman.exe
+online
+

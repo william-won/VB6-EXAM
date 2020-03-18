@@ -1,0 +1,6 @@
+2011.06.22
+1. SmartMeter SNRM UA 길이 56개도 정상 처리하도록 수정
+2. 계기정수 float처리
+3. 현월 사용량 소수점 1자리까지 표기
+4. G-Type과 E-Type 옵션 버튼으로 추가하도록 기능 추가
+5. E-Type Parser 적용

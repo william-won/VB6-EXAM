@@ -1,0 +1,36 @@
+#
+# Script to Activate Trumpet for an BBS Internet Door
+#      1.  Be sure to set the dns= and domain= to your BBS settings
+#      2.  If you are using SLIP
+#               set slip-enabled=1
+#               set ppp-enabled=0
+#      3.  If you are using PPP
+#               set slip-enabled=0
+#               set ppp-enabled=1
+#      4.  Make sure each save line has the correct path to
+#          Trumpet's trumpwsk.ini file.
+#      5.  If your BBS uses a fixed IP address, set ip=
+#          to the IP address provided by the BBS, otherwise
+#          use the ip=^I setup.
+#
+save "ip=199.232.44.124"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+#save "ip=^I"                      "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-port=^A"                "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-baudrate=^S"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "netmask=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "gateway=0.0.0.0"             "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "dns=198.64.6.1 198.64.6.7"   "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "domain=neosoft.com"          "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-enabled=1"              "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-handshake=1"            "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "slip-compressed=1"           "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "ppp-enabled=0"               "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mtu=552"                     "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "rwin=2048"                   "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+save "mss=512"                     "Trumpet Winsock" c:\winapp\internet\trumpet\trumpwsk.ini
+
+display "^J^MStarting tcpman.exe^J^M"
+show 2
+exec \winapp\internet\trumpet\tcpman.exe
+online
+

@@ -1,0 +1,428 @@
+1.  Ich habe Probleme mit der Einstellung der Tastaturbelegung 
+    im Dialogfeld Tastatureinstellungen. Obwohl die Tasten richtig 
+    belegt sind, funktionieren sie nicht, wenn ich NetTerm starte 
+    und mich am Host einlogge.
+
+    Während der Definition der Tastaturbelegung hat die NUM LOCK-
+    Anzeige geleuchtet. Deshalb ist das Programm davon ausgegangen, 
+    daß Sie die Tastaturbelegung mit dem NUM LOCK Modifier 
+    vorgenommen haben. Nehmen Sie die Einstellungen erneut vor 
+    und vergewissern Sie sich, daß die NUM LOCK-Funktion ausgeschaltet 
+    ist und die grüne Anzeige oberhalb des Nummernblocks nicht leuchtet.
+
+    Sie können eine Taste auch mit dem NUM LOCK Modifier definieren. 
+    Klicken Sie dazu in Dialogfeld für die Tastatureinstellungen 
+    einfach auf die Num-Lock-Taste. Anschließend erscheint die grüne 
+    Anzeige. Klicken Sie jetzt auf die Taste, für die die Belegung 
+    definiert werden soll. Verfahren Sie dabei wie üblich. Normalerweise
+    sollten Sie eine Tastenbelegung jedoch nicht mit dem 
+    Num-Lock-Modifier einstellen oder während Sie online arbeiten.
+
+2.  Ich habe Probleme beim Einfügen von Text in das NetTerm-Fenster.
+    Ich habe Probleme beim ASCII-Dateitransfer.
+
+    Sowohl beim Einfügen von Text als auch beim Senden von ASCII-Dateien
+    zum Host verwendet NetTerm zwei Zeitwerte. Diese Zeitwerte werden 
+    über die Registerkarte Dateitransfer in 
+    'Optionen | Einstellungen | Allgemeine Einstellungen' eingegeben. 
+    Die Standardeinstellung für Delay-1 lautet 20, und für Delay-2 200.
+
+3.  NetTerm speichert meine Telefonbucheinträge nicht.
+
+    Dieses Phänomen tritt auf, wenn NetTerm in einem Verzeichnis 
+    entpackt und installiert wird. Entpacken Sie NetTerm in einem 
+    temporären Verzeichnis und installieren es in das Zielverzeichnis.
+    
+4.  Kann die Anzahl der Arbeitssitzungen bei NetTerm beschränkt werden?
+    
+    Ja. Fügen Sie dazu den Wert MAXININSTANCE=x in die Konfigurations-
+    datei netterm.ini ein. Mit x geben Sie die maximale Anzahl der 
+    Arbeitssitzungen ein. Fügen Sie diese Zeile an den Anfang der 
+    netterm.ini in der Sektion [TERM] ein.
+
+5.  Mein Modem ist nicht in der Liste der unterstützten Modems 
+    aufgeführt.
+
+    Es wäre sehr kosten- bzw. zeitintentisiv, alle in der Auswahl 
+    enthaltenen Modems auszuprobieren oder ein neues Gerät zu kaufen.
+    Wir empfehlen Ihnen, die TAPI-Option zu verwenden, sofern das 
+    Betriebssystem diese Funktion unterstützt. Eine Liste mit den
+    erforderlichen Werten für die gängigsten Modem-Einstellungen 
+    finden Sie unter:
+
+         http://www.uk.pipeline.com/support/modems.html
+
+6.  Arbeitet der FTP-Server mit BBS-Systemen, die diese Funktion 
+    unterstützen?
+
+    Ja, mit bbs.execpc.com gibt es überhaupt keine Probleme.
+
+
+7.  Kann NetTerm zusammen mit dem Netscape WWW-Client eingesetzt 
+    werden?
+
+    Ja, dazu müssen Sie NetTerm in Netscape unter 
+    'Optionen | Allgemeine Einstellungen' eintragen. Wählen Sie die 
+    Registerkarte 'Anwendungen' und tragen NetTerm im Feld
+    'Telnet-Anwendungen' mit Hilfe der Schaltfläche [Durchsuchen] 
+    ein. Anschließend können Sie die Telnet-Anwendung direkt von 
+    Netscape aus aufrufen.
+
+8.  Wie bekomme ich die korrekten länderspezifischen internationalen
+    Zeichen für mein Land?
+
+    Mit Hilfe sogenannter Landessprachendateien kann NetTerm sowohl 
+    die Tastatur- als auch die Bildschirmzeichen abbilden (mappen). 
+    Die jeweilige Landessprachendatei kann über das Telefonbuch über
+    die Schaltfläche [Internationales Mapping] festgelegt werden.
+    Eine Landessprachendatei wird erzeugt, indem Sie die country.ini 
+    kopieren und diese Kopie nach dem gewünschten Landesnamen 
+    benennen, wie z. b. norway.ini oder german.ini. Ordnen Sie diese
+    Datei anschließend einem Host zu und nehmen das Tastatur- und
+    Bildschirmzeichenmapping über 'Optionen | Einstellungen' vor.
+    In der Beispieldatei norway.ini werden die Zeichen folgendermaßen
+    abgebildet (gemappt):
+
+         Video            KeyBoard Normal  KeyBoard Shifted
+         0x7b --> 0xe6     0x1a --> 0x7d    0x1a --> 0x5d
+         0x7c --> 0xf8     0x27 --> 0x7c    0x27 --> 0x5c
+         0x7d --> 0xe5     0x28 --> 0x7b    0x28 --> 0x5b
+         0x5b --> 0xc6
+         0x5c --> 0xd8     Beim Tastaturmapping wird der Windows-
+         0x5d --> 0xc5     Scan-Code verwendet.
+
+    Über den Menüpunkt 'Mapping aktiv' in 'Optionen | Einstellungen 
+    | Internationale ...' kann das Mapping für alle Hostrechner 
+    generell aktiviert bzw. deaktiviert werden.
+
+    InterSoft erlaubt das Einfügen der jeweiligen Landessprachendateien
+    in das NetTerm-Verzeichnis. Diese Dateien gehören vom Zeitpunkt
+    der Erzeugung an zum Lieferumfang von NetTerm. Sobald Sie den
+    jeweilige Landessprachendatei getestet haben, teilen Sie uns dies 
+    über die im Dialogfeld 'Info über NetTerm' angegebene Email-Adresse
+    mit.
+    
+9.  Wie kann ich Dateien drucken, die Escape-Sequenzen für HP-Drucker 
+    beinhalten?
+
+    Dazu sollten Sie das Programm netsend.c auf Ihren Host laden und 
+    kompilieren. Dieses Programm kann Dateien verarbeiten, die 
+    Escape-Sequenzen für HP-Drucker enthalten oder bei denen die Zeilen 
+    so lang sind, daß die Verarbeitung mit dem Standardscript netprint
+    nicht funktionieren würde.
+
+    Für das eigentliche Drucken sollten Sie die Smart-Print-Optionen 
+    'Direktes Senden an Druckerschnittstelle' oder 'Direktes Senden
+    an Windows-Druckerwarteschlange' verwenden, die über den Menüpunkt
+    'Optionen | Einstellungen | Allgemeine Einstellungen | Drucken' 
+    aktiviert werden können.
+
+10. Einer unserer Kunden, der mit Word Perfect unter Unix arbeitet, 
+    gab uns folgenden Tip:
+
+    Wenn jemand von Ihren Kunden Ihre Telnet-Anwendung mit Word Perfect
+    5.2+ für Unix nutzen möchte, müssen sie bei der Umgebungsvariable 
+    WPTERM52 den Wert 386CONS eintragen, wenn sie KEYS-WORDPERFECT
+    verwenden. Auch mit der VT-100 Emulation ist hiermit gewährleistet,
+    daß das System die korrekten Werte berechnet.
+
+11. Für die Versionen 3.2.0 und höher wurden die Schutzfunktionen 
+    geändert, damit die Symbolleiste, die Menüleiste sowie die 
+    einzelnen Menüpunkte besser gesteuert werden können. Dazu wird die 
+    Datei namens protect.ini mit ausgeliefert. Diese Datei kann 
+    in einem beliebigen Verzeichnis abgelegt werden. Dieses Verzeichnis
+    wird in der netterm.ini über den Wert PROTECTFILE angegeben. 
+    Um die Schutzfunktion zu aktivieren, geben Sie bei PROTECT eine 
+    1 ein. Das Beispiel für einen Eintrag in der netterm.ini für die 
+    Aktivierung einer Schutzfunktion, bei der sich die Datei 
+    protect.ini. im Verzeichnis D:\DATEN befindet, sieht folgendermaßen
+    aus:
+
+         PROTECT=1
+         PROTECTFILE=D:\DATA\PROTECT.INI
+
+    Die Datei protect.ini ist in drei Bereiche unterteilt:
+
+    Schutz der Symbolleiste  - Steuerung der Symbole, die in der 
+                               Symbolleiste angezeigt werden.
+    Schutz derMenüleiste     - Steuerung der Menüs der Menüleiste.
+    Schutz der Menüpunkte    - Steuerung der jeweiligen Menüpunkte 
+                               der Menüs.
+
+    Um ein Symbol, ein Menü oder einen Menüpunkt zu deaktivieren, 
+    setzen Sie den entsprechenden Wert einfach von ON auf OFF. 
+    Wenn ein Menü deaktiviert wird, müssen die Menüpunkte des Menüs 
+    nicht zusätzlich ausgeschaltet werden.
+
+12. Kann ich mit Hilfe der Smart-Buttons einen Menüpunkt wie z. B.
+    'Bildschirmdruck' auswählen?
+
+    Ja. Tragen Sie dazu ~99999 in das Feld ein, in das die 
+    gesendeten Daten eingegeben werden müssen. 99999 ist die 
+    ID-Nummer für diesen Menüpunkt. NetTerm wählt beim Anklicken
+    des Smart-Buttons den Menüpunkt an.
+
+    Weiter unten finden Sie eine Liste der gültigen ID-Nummern für 
+    die einzelnen Menüpunkte.
+
+    Wenn Sie hinter das Tilde-Zeichen den Namen einer gültigen 
+    Tastenbelegung eintragen, lädt NetTerm diese Tastenbelegung
+    sofort. Wenn Sie z. B. ~EMACS in das Feld 'Gesendete Daten' 
+    eintragen, wird die Tastendefinition für EMACS geladen. 
+    Auf diese Weise können durch Klicken auf einen Smart-Button
+    zwischen verschiedenen Tastenbelegungen hin- und herschalten.
+    Hierfür sind mindestens zwei Smart-Buttons erforderlich:
+    Eine Schaltfläche für die spezielle Tastenbelegung wie z. B.
+    EMACS und eine Schaltfläche, um wieder zur 'normalen' Belegung
+    zurückzukehren, wie z. B. DEFAULT:
+    
+    Wenn Sie für einen Smart-Button eine gültige HTML-URL 
+    eintragen, startet NetTerm Ihre benutzerdefinierten Browser 
+    für die Verarbeitung. Dies ist bei allen URLs möglich, sogar
+    bei den ftp:// URL.
+
+    Kann ich auch mehr als acht Smart-Buttons definieren?
+
+    Ja. Sie können drei verschiedene Ebenen bzw. Blöcke mit 
+    jeweils acht Schaltflächen definieren. Um von einer Ebene in 
+    die nächste zu gelangen, klicken Sie mit der rechten Maustaste 
+    irgendwo auf die Smart-Button-Leiste.
+
+13. Kann ich mit Hilfe der Smart-Buttons ein Script oder ein 
+    Programm starten?
+
+    Ja. Dazu muß der Klammeraffe (@) vor den Befehl gesetzt werden.
+    NetTerm durchsucht dann den Befehl nach dem Eintrag .exe und 
+    ruft das angegebene Programm auf. Dabei können auch Kommando-
+    zeilenargumente angegeben werden. Der Eintrag .exe muß in 
+    Kleinbuchstaben eingegeben werden. Beispiel:
+
+         @notepad.exe
+
+    Findet NetTerm keinen .exe-Eintrag, wird der String als Script
+    verarbeitet. Beachten Sie dabei, daß Sie online sein müssen 
+    und die vollständige Pfadangabe für das Script erforderlich 
+    ist. Beispiel:
+
+         @\netterm\scripts\runtime.txt
+
+14. Warum macht das Modem beim Wählen Geräusche?
+
+    Damit auch die PCMIA-Modem, die seit neuestem auf dem Markt 
+    sind, unterstützt werden können, wurden die Modem-Einstellungen 
+    in NetTerm geändert. Wenn bei Ihnen ein Modeminitialisierungs-
+    paramter wie z. B. 
+
+         AT %F1 M0 S11=40 S2=128
+
+    eingetragen ist, ändern Sie den Parameter auf:
+
+         AT%F1\rATM0\rATS11=40 S2=128
+
+    Durch den Eintrag 'ATM0' werden die Modem-Geräusche unterdrückt.
+
+15. Hinweis von einem unserer Kunden:
+    Der Einsatz des Norton-Programms FASSINT führt bei NetTerm und
+    anderen Anwendungen zu Abstürzen!
+
+16. Arbeitet NetTerm mit netcom zusammen?
+
+    Der Telnet-Client von NetTerm funktioniert mit der TCP/IP-
+    Software netcom, das Zmodem oder der FTP-Server jedoch nicht. 
+    Wir arbeiten derzeit an einer Lösung dieses Problems. NetTerm
+    läuft jedoch einwandfrei, wenn Sie eine Winsock-Schnittstelle
+    wie z. b. Trumpet anstelle der normalen Netcom-Software einsetzen.
+    Im NetTerm-Verzeichnis befindet sich ein Script, netcom.txt, mit
+    dessen Hilfe Trumpet Zugang zu netcom bekommen kann. Mit dem 
+    Wissen, das wir durch die Tests mit Netcom gewonnen haben, lohnt
+    sich der Kauf der Trumpet WinSock auf jeden Fall, da Sie wesentlich
+    schneller und komfortabler im WWW surfen können.
+   
+17. Kann Ich die Option 'Transparentes Drucken' bei Host-Rechnern 
+    einsetzen, die diese Funktion nicht unterstützen?
+
+    Ja. Hierfür wurde in das Menü 'Datei' ein Menüpunkt namens 
+    'Transparentes Drucken (formatiert) ein' eingefügt. Mit dieser 
+    Option können Daten, die normalerweise nur zum Bildschirm gesendet 
+    werden, so gesteuert und formatiert werden, daß sie auch an den 
+    Drucker weitergegeben werden können. Dabei werden dieselben 
+    Optionen wie beim normalen transparenten Drucken verwendet. 
+    Die Formatierung wird durch die beiden folgenden Werte in der 
+    netterm.ini gesteuert:
+
+         FORMATPRINT_START=y^M
+         FORMATPRINT_LINES=39
+
+    Mit dem Wert FORMATPRINT_START wird angegeben, welcher String 
+    zum Host gesendet wird, um die Druckausgabe zu starten. Wenn die 
+    Option 'Transparentes Drucken (formatiert) ein' aktiviert ist, 
+    wird die interne Routine für das transparentes Drucken einge-
+    schaltet, und der String FORMATPRINT_START wird zum Host gesendet,
+    um anzuzeigen, daß das Drucken gestartet werden soll. Mit dem 
+    Wert FORMATPRINT_LINES wird die Anzahl der Zeilen (line feeds) 
+    angegeben, die als eine Seite verarbeitet werden sollen. Sobald 
+    dieser Wert erreicht ist, wird der String form feed zu den Druck-
+    daten hinzugefügt, damit ein Seitenvorschub durchgeführt werden 
+    kann. Nachdem der Host das Senden der Daten beendet hat, sollten 
+    Sie die Option 'Transparentes Drucken aus' anwählen. NetTerm druckt
+    die Daten dann gemäß den Einstellungen in 'Optionen | Einstellungen 
+    | Allgemeine Einstellungen | Drucken'.
+
+    Da es sich bei den beiden Optionen für das Transparente Drucken
+    um Menüpunkte handelt, kann das Transparente Drucken natürlich auch
+    über die Smart-Buttons ein- bzw. ausgeschaltet werden. Lesen Sie 
+    hierzu auch Punkt 14 dieser Datei.
+
+18. Anleitung für die Unterstützung von rlogin-Dienstes.
+
+    NetTerm bietet jetzt auch Unterstützung des rlogin. Setzen Sie 
+    hierzu den Telnet-Port im Telefonbuch auf 513 und tragen anschließend
+    Ihr User-ID in das Feld 'Benutzer' im Dialogfeld 'Desktop-Einstellungen' 
+    ein.
+
+19. Sind Sie auf der Suche nach einen Schriftart, die eine nahezu 
+    vollständige Bildschirmanzeige bei einer Auflösung von 1024 x 768 
+    ermöglicht? Wählen Sie Courier New, 14 Punkt, fett.
+
+20. Hinweis von einem unserer Kunden. Bei einigen Rechnern erschien der 
+    Text auf den Smart-Buttons in der Schriftart Greek. Dabei hat sich 
+    herausgestellt, daß dies daran liegt, welche Schriftarten auf dem
+    jeweiligen Rechner installiert sind. NetTerm legt die Punktgröße 
+    der für die Smart-Buttons zu verwendenden Schriftart fest, indem es 
+    die Länge des längsten Texts der Schalflächen und die aktuelle 
+    Bildschirmauflösung berechnet. NetTerm gibt den Befehl an Windows 
+    weiter, entweder MS Sans Serif oder Arial Narrow zu benutzen. 
+    Windows versucht jedoch seinerseits, aus den vorhandenen Windows-
+    Systemschriften eine geeignete Schriftart auszuwählen. Dies muß 
+    nicht zwangläufig MS Sans Serif oder Arial Narrow sein.
+
+// NetTerm Menüpunkte
+// Menü 'Datei'
+#define IDM_CONNECT                   10000
+#define IDM_DISCONNECT                10001
+#define IDM_PHONE                     10002
+#define IDM_BBSLIST                   10003
+#define IDM_SEPARTOR_10004            10004
+#define IDM_PRINT                     10005
+#define IDM_SETUP                     10006
+#define IDM_SPRINT                    10007
+#define IDM_SEPARTOR_10008            10008
+#define IDM_LOGPRINT                  10009
+#define IDM_LOGFILE                   10010
+#define IDM_EJECTP                    10011
+#define IDM_SEPARTOR_10012            10012
+#define IDM_TPON                      10013
+#define IDM_TPOFF                     10014
+#define IDM_STPON                     10015
+#define IDM_SEPARTOR_10015            10016
+#define IDM_EXIT                      10017
+
+// Menü Bearbeiten
+#define IDM_SCB                       11001
+#define IDM_RCB                       11002
+#define IDM_SEPARTOR_11003            11003
+#define IDM_RESET                     11004
+#define IDM_ERESET                    11005
+#define IDM_SBREAK                    11006
+#define IDM_LBREAK                    11007
+#define IDM_AP                        11008
+#define IDM_SEPARTOR_11009            11009
+#define IDM_SAVESCREEN                11010
+#define IDM_CLEAR                     11011
+#define IDM_CLEARS                    11012
+#define IDM_SAVEAS                    11013
+#define IDM_SEPARTOR_11014            11014
+#define IDM_PASTEIPA                  11015
+#define IDM_PASTEIP                   11016
+
+// Menü Optionen
+// Einstellungen in Optionen
+#define IDM_FONT                      12000
+#define IDM_SETTINGS                  12001
+#define IDM_ANSIC                     12002
+#define IDM_KB1                       12003
+#define IDM_DESKTOP                   12004
+#define IDM_DBBAR                     12005
+#define IDM_PIN                       12006
+#define IDM_SETTELNET                 12007
+#define IDM_SEPARTOR_12008            12008
+// International Video/Keyboard
+#define IDM_SS                        12300
+#define IDM_AM                        12301
+#define IDM_VM                        12302
+#define IDM_KM                        12303
+#define IDM_KO                        12304
+#define IDM_LCD                       12305
+
+// Hilfsmittel in Optionen
+#define IDM_FINGER                    12400
+#define IDM_RESOLVE                   12401
+#define IDM_MYIP                      12402
+#define IDM_FTPD                      12403
+#define IDM_PRINTER                   12404
+#define IDM_FTPC                      12405
+// Options Trace
+#define IDM_TRACE1                    12501
+#define IDM_TRACE2                    12502
+
+// Menü 'Senden'
+#define IDM_SASCII                    906
+#define IDM_SKERMIT                   905
+#define IDM_SZMODEM                   900
+
+// Menü 'Empfangen'
+#define IDM_RASCII                    916
+#define IDM_RKERMIT                   915
+#define IDM_RZMODEM                   917
+
+// Menü 'Fenster'
+#define IDM_NEWWINDOW                 15000
+#define IDM_QUICK                     15001
+#define IDM_EDITOR                    15002
+#define IDM_TITLE                     15003
+#define IDM_SAVEXY                    15004
+#define IDM_SEPARTOR_15004            15005
+#define IDM_HOSTSTART                 15500
+#define IDM_HOSTEND                   15549
+
+// Menü 'Hilfe'
+#define IDM_HELP                      16000
+#define IDM_SEPARTOR_16001            16001
+#define IDM_ORDERING                  16002
+#define IDM_REGISTER                  16003
+#define IDM_LEGAL                     16004
+#define IDM_SEPARTOR_16005            16005
+#define IDM_ABOUT                     16006
+
+// Pop-Up Menü (rechte Maustaste)
+#define IDM_URL                       17000
+#define IDM_PSTRING1                  17001
+#define IDM_PSTRING2                  17002
+#define IDM_BBSDOOR                   17003
+#define IDM_SKEY                      17004
+#define IDM_SEPARTOR_17005            17005
+#define IDM_MSCB                      17006
+#define IDM_MRCB                      17007
+#define IDM_MRSCB                     17008
+#define IDM_MCLEAR                    17009
+#define IDM_MPRINT                    17010
+#define IDM_MRESET                    17016
+#define IDM_ESCROLL                   17011
+#define IDM_MCLEARS                   17017
+#define IDM_PSCROLL                   17012
+#define IDM_MSAVEAS                   17018
+#define IDM_PRINTH                    17013
+#define IDM_SHOWCLIP                  17014
+#define IDM_SEPARTOR_17019            17019
+#define IDM_MPASTEIPA                 17020
+#define IDM_MPASTEIP                  17021
+#define IDM_SEPARTOR_17022            17022
+#define IDM_MSFONT                    17023
+#define IDM_MMFONT                    17024
+#define IDM_MLFONT                    17025
+#define IDM_SEPARTOR_17026            17026
+#define IDM_MSSFONT                   17027
+#define IDM_MSMFONT                   17028
+#define IDM_MSLFONT                   17029
+#define IDM_NOOP                      17031
+

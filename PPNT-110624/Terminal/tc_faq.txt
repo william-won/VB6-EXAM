@@ -1,0 +1,337 @@
+                        【NetTerm】常見問答
+
+
+1.  我每次在定義按鍵對話方塊內定義完按鍵，好像已經弄好了，可是每當
+    我啟動 NetTerm 並登入主機的時候，好像還是沒有用！
+
+    這個情形的問題是，每當你定義按鍵的時候，鍵盤上面的 Num Lock 燈
+    還是亮的。NetTerm 會認為要亮 Num Lock 燈時，定義按鍵才有用。請
+    嘗試關掉 Num Lock 燈重新定義試試看，並確定對話方塊的右上方，那
+    個 Num Lock 燈下面的綠球並沒有出現。
+
+    如果你真想要定義一個按鍵，而同時 Num Lock 也要同時存在，當然你
+    可以這樣做。將滑鼠左鍵按在 Num Lock 按鍵上面，這時候綠球就會出
+    現，現在你就可以按你要定義的按鍵，就用一般標準的程序定義就行了。
+    一般來說，你應該用不到定義一個需要 Num Lock 的按鍵。
+
+2.  我常常在貼文件到 NetTerm 視窗的時候碰到困難。
+    我常常在做 ASCII 檔案傳輸的時候碰到困難。
+
+    NetTerm 在使用貼上文件及 ASCII 檔案傳輸的時候使用兩種速度的調節
+    ，這可以規定。你選擇選項|設定|綜合設定|檔案傳輸設定，通常延遲-1
+    應該是 20，延遲-2 應該是 200。
+
+3.  我無法儲存 NetTerm 到我的位址簿。
+
+    這在你解壓縮並安裝 NetTerm 是在同一個目錄時總會發生。你應該要在
+    一個臨時目錄中先將原始檔放在裡面，然後再安裝 NetTerm 到另一個正
+    式目錄。
+
+4.  有沒有辦法限制 NetTerm 開的視窗數目？
+
+    可以呀，你只要在 netterm.ini 當中加入 MAXINSTANCE=x 就可以了。其
+    中 x = 最大的視窗數目。這一行應該加在 [TERM] 這一個項目的第一行。
+
+5.  我在數據機列表中找不到我數據機的型號。
+
+    如果要測試所有廠牌的數據機，然後購買一一測試，對我而言真的耗資頗
+    巨。請參閱第 18 項常見問答，你可以到這個 html 位址找到適合的數據
+    機參數。如果你的系統能支援，我們也建議你選擇 TAPI 選項。
+
+6.  有些 BBS 站提供 FTP 功能，請問 FTP 伺服器能支援嗎？
+
+    可以啊，我們在 bbs.execpc.com 測試過，效果很好。
+
+
+7.  NetTerm 能在 Netscape 上面連結得到嗎？
+
+    是的。你只要在 Netscape 上面設定一下就行。選擇 Options（選項）|
+    General Preferences（一般設定）|Apps（應用程式）|Telnet Application
+    （Telnet 應用程式），點選 browse（瀏覽）按鈕，把 NetTerm 找到便
+    成了。
+
+
+8.  我要怎樣得到屬於我國家的國際視訊鍵盤對應？
+
+    NetTerm 有能力建構出鍵盤及顯示器的國碼表。國碼表可以被主機所定義，
+    在電話目錄中使用國際視訊鍵盤對應按鈕，選擇預先邊好的國碼表，如
+    norway.ini，則會複製到 country.ini 檔案中，然後定義這個檔案到你的
+    主機，使用選項-設定-國際視訊/鍵盤。底下是 norway.ini 包含的例子：
+
+         Video            KeyBoard Normal  KeyBoard Shifted
+         0x7b --> 0xe6     0x1a --> 0x7d    0x1a --> 0x5d
+         0x7c --> 0xf8     0x27 --> 0x7c    0x27 --> 0x5c
+         0x7d --> 0xe5     0x28 --> 0x7b    0x28 --> 0x5b
+         0x5b --> 0xc6
+         0x5c --> 0xd8     注意鍵盤對應使用的是 Windows 特定的
+         0x5d --> 0xc5     key scan code。
+
+    選項-設定-國際視訊/鍵盤項目也同時包含有顯示鍵盤掃描碼，來控制開/
+    關對所有主機的對應。
+
+    InterSoft 公司會接受獨特的國家碼檔案，並收納到 NetTerm，如果你測
+    試出來你的國碼表，請 E-mail 到關於對話方塊的電子郵件地址中。
+
+9.  我如何能夠列印含有惠普印表機 escape sequences 的檔案？
+
+    程式 netsend.c 需要被上傳至你的主機中，並組譯。
+    這個程式是用來處理含有惠普印表機 escape sequences 的檔案，以及極
+    長的一行，通常不能正常執行的標準網路列印巨集檔。
+
+    NetTerm 選項-設定-綜合設定-列印設定中，智慧列印選項的『直接送到
+    印表機連接埠』或者『直接送到 Windows 線上待處理列』應該在最後列
+    印的時候選擇。
+
+10. 對於 Unix WordPerfect 的使用者，我們一個顧客的建議：
+
+    如果其他 NetTerm 使用者需要用 telnet 使用 WP5.2+ for Unix，當使用
+    KEYS-WORDPERFECT一定要要求使用 386CONS 作為環境設定值 WPTERM52。
+    即使他們其實使用 vt100 模擬形態，這樣才會保證系統正常。
+
+11. 從 3.2.0 版或以後的版本，已經改為開始支援更多多樣的控制保護模式，
+    包括工具列、選單及次選單。一個在 NetTerm 目錄底下的檔案 protect.ini
+    可以用來控制保護模式。這個檔案可以藏在任何目錄，而它的路徑是由
+    netterm.ini 裡面的 PROTECTFILE 來控制。要啟動保護模式，設 PROTECT =1
+    例如，要使用藏在磁碟機 D 的 data 路徑裡面的 protect.ini，則要在
+    netterm.ini 加上兩行：
+
+         PROTECT=1
+         PROTECTFILE=D:\DATA\PROTECT.INI
+
+    而 protect.ini file 包含三個主要的部分：
+
+         工具列保護 - 控制工具列上的圖示按鈕
+         選單保護   - 控制選單上的第一層
+         次選單保護 - 控制選單上的次一層
+
+    要取消按鈕、選單及次選單功能，很簡單。只要更改值為 ON 或 OFF 就成
+    了。如果你對選單選 OFF，則比它次一級的次選單就不必選了。
+
+12. 我可以使用快速鍵來選擇一個功能表上的功能，如列印螢幕嗎？
+
+    可以的，你只要在傳送訊號內容中放入 ~99999 就行了。~99999 是一個功
+    能表上的碼。NetTerm 就會選擇這項功能了。
+
+    至於功能表的碼，你可以參考這篇最下面的列表。
+
+    如果你在傳送訊號內容中放入的第一個字是 ~，NetTerm 會立刻載入在這符
+    號後面代表的按鍵設定。例如，在傳送訊號內容中放置 ~EMACS，會立刻載入
+    EMACS 鍵盤設定。這個方法可以讓你利用按快速鍵，快速的切換按鍵設定。
+    一般來說，你需要設定兩個快速鍵來做這件事，一個切換到你要的按鍵設定
+    ，一個切換回來。
+
+    如果你在快速鍵中放置一個有效的 html URL，NetTerm 會自動去呼叫你預設
+    的瀏覽器並打開這個超連結。這個指令可以運用在所有 URL 的語法，包括
+    ftp:// URL。
+
+    我可以擁有超過 8 個的快速鍵嗎？
+
+    可以的，你可以定義三組快速鍵，每組有 8 個按鈕。要互相切換三組，只要
+    在快速鍵的任何一個地方按右鍵就可以了。
+
+13. 我可以利用快速鍵來執行一個登錄巨集檔或是程式嗎？
+
+    可以的。如果你在傳送訊號內容第一個字元放置 @，NetTerm 就會立刻判別
+    下面的數值。如果找到 .exe 的字眼，就會立刻執行這檔案，包括執行的參
+    數。你要注意一點， .exe 一定要在符號的後面，例如：
+
+         @notepad.exe
+
+    如果找不到 .exe 的字眼，NetTerm 會認為這是一個登錄巨集檔，這時候你
+    一定要已經上線，巨集檔的路徑也要完整。例如：
+
+         @\netterm\scripts\runtime.txt
+
+14. 我沒辦法讓數據機在撥號的時候保持靜音，為什麼？
+
+    NetTerm 最近為了配合新出廠的一些數據機，特別是 PCMCIA 數據機，內部
+    做了一些修正。如果你現在數據機的設定是像這樣：
+
+         AT %F1 M0 S11=40 S2=128
+
+    就把它改成：
+
+         AT%F1\rATM0\rATS11=40 S2=128
+
+    其中 ATM0 就是控制數據機靜音的參數。
+
+15. 有一個客戶說，如果你使用 Norton 的一個程式 FASSINT，小心！它會破壞
+    NetTerm 還有一些程式！
+
+
+16. NetTerm 可以使用在 netcom 嗎？
+
+    NetTerm 基本的 telnet 功能可以用在 netcom TCP/IP 軟體，但是不能使用
+    它的 zmodem 或是 FTP 伺服器。我們還在改進這一點。不過如果你使用任何
+    Winsock，如 Trumpet 來代替 netcom 軟體，倒是可以執行得很好。我們有
+    放入一個特別的登錄巨集檔叫 netcom.txt 可以使用 Trumpet 進到 netcom。
+    我們的測試經驗，如果購買使用 Trumpet，可以順利使用 netcom 也可以讓
+    你的 WWW 快一點。你可以參考下列網址得到更多資訊：
+    http://www.webster-image.com/iis/PCsHelpPage/index.htm
+
+17. 我可以在沒有支援透明列印特性的主機上面使用透明列印這項功能嗎？
+
+    是的，我們有加入一個新的選項，在『檔案』的下面，叫做『透明列印開啟』
+    。這特性允許限制控制及格式化資料，正常的送出如同送到螢幕的訊號一樣到
+    印表機，而能正常送出透明列印列印要求。下面是兩個要放在 netterm.ini
+    的關鍵字格式：
+
+         FORMATPRINT_START=y^M
+         FORMATPRINT_LINES=39
+
+    關鍵字 FORMATPRINT_START 是要送開始列印的訊號到主機。當格式化透明列印
+    開啟被選擇了，內部的透明列印邏輯就被變成開，FORMATPRINT_START 字串被
+    送到主機，確定印表機已經打開。關鍵字 FORMATPRINT_LINES 規定要送出的每
+    頁行數。當設定直到達，一個 form feed 的訊號會加入印表機中，強迫換頁。
+    一直到主機完完全全的送出所有的資料，應該選擇『透明列印關閉』。選擇選
+    項-設定-綜合設定-列印設定選項，可以規定 NetTerm 怎麼做。
+
+    還要注意的是，既然這兩種控制都是要用到的，你可以利用快速鍵來簡化作業，
+    詳情請看第 14 項。
+
+18. 支援 rlogin 的簡介
+
+    簡單的 rlogin 功能，NetTerm 已經支援了。你要使用，就在電話目錄設定
+    telnet 連接埠到 513，然後在桌面設定規定你的使用者名稱。
+
+19. 您在尋找解析度 1024 x 768 中，幾乎可以變成全螢幕的字型嗎？試試看
+    Courier New，14 級粗體。
+
+20. 以下來自我們一位使用者的經驗。在某些機器上面，位於快速鍵上的字變成希
+    臘文了！在幾次尋找過原因之後，發現跟工作站定義的字型有關。NetTerm
+    是根據計算快速按鍵可以容納的最大字型以及螢幕解析度來決定快速按鍵上的
+    字型的。這時候會根據演算的結果來決定採用 MS Sans Serif 或 Arial Narrow
+    字型。然而， Windows 也會試著去選擇最好的字型，此時就不一定是 MS Sans
+    Serif 或 Arial Narrow 了。
+
+
+// NetTerm Menu Items
+// File Menu
+#define IDM_CONNECT                   10000
+#define IDM_DISCONNECT                10001
+#define IDM_PHONE                     10002
+#define IDM_BBSLIST                   10003
+#define IDM_SEPARTOR_10004            10004
+#define IDM_PRINT                     10005
+#define IDM_SETUP                     10006
+#define IDM_SPRINT                    10007
+#define IDM_SEPARTOR_10008            10008
+#define IDM_LOGPRINT                  10009
+#define IDM_LOGFILE                   10010
+#define IDM_EJECTP                    10011
+#define IDM_SEPARTOR_10012            10012
+#define IDM_TPON                      10013
+#define IDM_TPOFF                     10014
+#define IDM_STPON                     10015
+#define IDM_SEPARTOR_10015            10016
+#define IDM_EXIT                      10017
+
+// Edit Menu
+#define IDM_SCB                       11001
+#define IDM_RCB                       11002
+#define IDM_SEPARTOR_11003            11003
+#define IDM_RESET                     11004
+#define IDM_ERESET                    11005
+#define IDM_SBREAK                    11006
+#define IDM_LBREAK                    11007
+#define IDM_AP                        11008
+#define IDM_SEPARTOR_11009            11009
+#define IDM_SAVESCREEN                11010
+#define IDM_CLEAR                     11011
+#define IDM_CLEARS                    11012
+#define IDM_SAVEAS                    11013
+#define IDM_SEPARTOR_11014            11014
+#define IDM_PASTEIPA                  11015
+#define IDM_PASTEIP                   11016
+
+// Options Menu
+// Setup Main
+#define IDM_FONT                      12000
+#define IDM_SETTINGS                  12001
+#define IDM_ANSIC                     12002
+#define IDM_KB1                       12003
+#define IDM_DESKTOP                   12004
+#define IDM_DBBAR                     12005
+#define IDM_PIN                       12006
+#define IDM_SETTELNET                 12007
+#define IDM_SEPARTOR_12008            12008
+// International Video/Keyboard
+#define IDM_SS                        12300
+#define IDM_AM                        12301
+#define IDM_VM                        12302
+#define IDM_KM                        12303
+#define IDM_KO                        12304
+#define IDM_LCD                       12305
+
+// Options Tools
+#define IDM_FINGER                    12400
+#define IDM_RESOLVE                   12401
+#define IDM_MYIP                      12402
+#define IDM_FTPD                      12403
+#define IDM_PRINTER                   12404
+#define IDM_FTPC                      12405
+// Options Trace
+#define IDM_TRACE1                    12501
+#define IDM_TRACE2                    12502
+
+// Send Menu
+#define IDM_SASCII                    906
+#define IDM_SKERMIT                   905
+#define IDM_SZMODEM                   900
+
+// Receive Menu
+#define IDM_RASCII                    916
+#define IDM_RKERMIT                   915
+#define IDM_RZMODEM                   917
+
+// Window Menu
+#define IDM_NEWWINDOW                 15000
+#define IDM_QUICK                     15001
+#define IDM_EDITOR                    15002
+#define IDM_TITLE                     15003
+#define IDM_SAVEXY                    15004
+#define IDM_SEPARTOR_15004            15005
+#define IDM_HOSTSTART                 15500
+#define IDM_HOSTEND                   15549
+
+// Help Menu
+#define IDM_HELP                      16000
+#define IDM_SEPARTOR_16001            16001
+#define IDM_ORDERING                  16002
+#define IDM_REGISTER                  16003
+#define IDM_LEGAL                     16004
+#define IDM_SEPARTOR_16005            16005
+#define IDM_ABOUT                     16006
+
+// Mouse Menu
+#define IDM_URL                       17000
+#define IDM_PSTRING1                  17001
+#define IDM_PSTRING2                  17002
+#define IDM_BBSDOOR                   17003
+#define IDM_SKEY                      17004
+#define IDM_SEPARTOR_17005            17005
+#define IDM_MSCB                      17006
+#define IDM_MRCB                      17007
+#define IDM_MRSCB                     17008
+#define IDM_MCLEAR                    17009
+#define IDM_MPRINT                    17010
+#define IDM_MRESET                    17016
+#define IDM_ESCROLL                   17011
+#define IDM_MCLEARS                   17017
+#define IDM_PSCROLL                   17012
+#define IDM_MSAVEAS                   17018
+#define IDM_PRINTH                    17013
+#define IDM_SHOWCLIP                  17014
+#define IDM_SEPARTOR_17019            17019
+#define IDM_MPASTEIPA                 17020
+#define IDM_MPASTEIP                  17021
+#define IDM_SEPARTOR_17022            17022
+#define IDM_MSFONT                    17023
+#define IDM_MMFONT                    17024
+#define IDM_MLFONT                    17025
+#define IDM_SEPARTOR_17026            17026
+#define IDM_MSSFONT                   17027
+#define IDM_MSMFONT                   17028
+#define IDM_MSLFONT                   17029
+#define IDM_NOOP                      17031
+
