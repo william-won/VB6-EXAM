@@ -1,15 +1,14 @@
 VERSION 5.00
 Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "MSWINSCK.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
-Object = "{9F3B4DE1-AA29-11D1-A3D9-FDA4E35D1D25}#1.0#0"; "Io.ocx"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form frmTelnet 
    BackColor       =   &H00C0FFFF&
    Caption         =   "CheckPhyRateApp v1.0     Copyright (c) ATAW"
-   ClientHeight    =   6030
+   ClientHeight    =   9120
    ClientLeft      =   2535
    ClientTop       =   2445
-   ClientWidth     =   6360
+   ClientWidth     =   14025
    FillColor       =   &H00800000&
    FillStyle       =   2  '¼öÆò¼±
    BeginProperty Font 
@@ -27,8 +26,8 @@ Begin VB.Form frmTelnet
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   6030
-   ScaleWidth      =   6360
+   ScaleHeight     =   9120
+   ScaleWidth      =   14025
    Begin VB.Frame Frame2 
       BackColor       =   &H00C0FFFF&
       Height          =   3615
@@ -251,7 +250,9 @@ Begin VB.Form frmTelnet
          Strikethrough   =   0   'False
       EndProperty
       Height          =   450
+      ItemData        =   "TelnetClient.frx":0442
       Left            =   240
+      List            =   "TelnetClient.frx":044C
       TabIndex        =   17
       Text            =   "COM1"
       Top             =   600
@@ -268,9 +269,11 @@ Begin VB.Form frmTelnet
          Strikethrough   =   0   'False
       EndProperty
       Height          =   450
+      ItemData        =   "TelnetClient.frx":045C
       Left            =   2280
+      List            =   "TelnetClient.frx":046F
       TabIndex        =   16
-      Text            =   "4800"
+      Text            =   "BaudRate"
       Top             =   600
       Width           =   1815
    End
@@ -486,9 +489,9 @@ Begin VB.Form frmTelnet
       Height          =   495
       Left            =   0
       TabIndex        =   0
-      Top             =   5535
-      Width           =   6360
-      _ExtentX        =   11218
+      Top             =   8625
+      Width           =   14025
+      _ExtentX        =   24739
       _ExtentY        =   873
       SimpleText      =   ""
       _Version        =   327682
@@ -519,7 +522,7 @@ Begin VB.Form frmTelnet
          EndProperty
          BeginProperty Panel4 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
             AutoSize        =   1
-            Object.Width           =   2699
+            Object.Width           =   16219
             TextSave        =   ""
             Key             =   "Status"
             Object.Tag             =   ""
@@ -535,14 +538,6 @@ Begin VB.Form frmTelnet
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-   End
-   Begin IOLib.IO IO1 
-      Left            =   5520
-      Top             =   5760
-      _Version        =   65536
-      _ExtentX        =   1270
-      _ExtentY        =   1270
-      _StockProps     =   0
    End
    Begin VB.Label Label8 
       BackColor       =   &H00C0FFFF&
@@ -597,12 +592,6 @@ Begin VB.Form frmTelnet
       TabIndex        =   9
       Top             =   3480
       Width           =   2055
-   End
-   Begin VB.Line Line3 
-      X1              =   0
-      X2              =   10080
-      Y1              =   0
-      Y2              =   0
    End
    Begin VB.Label Label1 
       BackColor       =   &H00C0FFFF&
@@ -799,6 +788,7 @@ Private Sub cmdinfo_Click()
   End If
 End Sub
 
+
 Private Sub Connect_Click()
    On Error Resume Next                                   ' Handle errors...
 '------------------------------------------------------------
@@ -913,6 +903,7 @@ Private Sub OptSerial_Click()
     OptionTCPIP.Value = False
 End Sub
 
+
 Private Sub Timer1sec_Timer()
     txtDate = Format(Date, "yy/mm/dd")
     txtTime = Format(Time, "hh:mm:ss")
@@ -927,6 +918,7 @@ Private Sub TimerState_Timer()
         End If
     'End If
 End Sub
+
 
 Private Sub WinsockClient_sendcomplete()
     Sendcomplete = True
